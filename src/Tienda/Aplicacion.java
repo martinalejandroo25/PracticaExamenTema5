@@ -81,6 +81,9 @@ public class Aplicacion {
                     break;
                 case 4:
                     System.out.println("Actualizar producto");
+                    System.out.println("Codigo del producto a modificar");
+                    String codigoAModificar = sc.nextLine();
+
                     break;
                 case 5:
                     System.out.println("Realizar compra:");

@@ -20,7 +20,6 @@ public class Tienda {
     public void eliminarProducto(String codigo) {
         Producto pro = null;
         for(Producto producto : inventario) {
-            boolean resultado;
             if (producto.getCodigo().equals(codigo)) {
                 pro = producto;
             }
