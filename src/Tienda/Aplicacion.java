@@ -21,20 +21,22 @@ public class Aplicacion {
         tienda.addProducto(equipo2);
         tienda.addProducto(equipo3);
 
-
-        System.out.println(
-                """
-                    1. Mostrar inventario.
-                    2. Agregar producto.
-                    3. Eliminar producto.
-                    4. Actualizar producto.
-                    5. Realizar compra.
-                    6. Mostrar historial de compras.
-                    7. Salir.
-                """
-        );
-        int opcion = Integer.parseInt(sc.nextLine());
+        System.out.println("Bienvenido a la Tienda!");
+        int opcion = 0;
         while (opcion!= 7) {
+            System.out.println(
+                    """
+                        1. Mostrar inventario.
+                        2. Agregar producto.
+                        3. Eliminar producto.
+                        4. Actualizar producto.
+                        5. Realizar compra.
+                        6. Mostrar historial de compras.
+                        7. Salir.
+                    """
+            );
+            opcion = Integer.parseInt(sc.nextLine());
+
             switch (opcion) {
                 case 1:
                     System.out.println("Inventario:");

@@ -8,7 +8,7 @@ public class Tienda {
     //Clase Tienda:
     //• Atributos:
     //• List<Producto> inventario
-    List<Producto> inventario = new ArrayList<Producto>();
+    static List<Producto> inventario = new ArrayList<Producto>();
     //• List<Compra> historialCompras
     List<Compra> historialCompras = new ArrayList<Compra>();
     //• Métodos principales:
@@ -54,6 +54,9 @@ public class Tienda {
     }
 
     public static void mostrarInventario() {
+    for(Producto producto : inventario) {
+            System.out.println(producto.getInfo());
+        }
     }
     public void mostrarHistorialCompras() {
         System.out.println(historialCompras.toString());
