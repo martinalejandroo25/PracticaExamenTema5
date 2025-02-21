@@ -26,13 +26,15 @@ public class Aplicacion {
         while (opcion!= 7) {
             System.out.println(
                     """
-                        1. Mostrar inventario.
-                        2. Agregar producto.
-                        3. Eliminar producto.
-                        4. Actualizar producto.
-                        5. Realizar compra.
-                        6. Mostrar historial de compras.
-                        7. Salir.
+                    ///////////////////////////////////////
+                    //  1. Mostrar inventario.          //
+                    //  2. Agregar producto.            //
+                    //  3. Eliminar producto.           //                     1
+                    //  4. Actualizar producto.         //
+                    //  5. Realizar compra.             //
+                    //  6. Mostrar historial de compras.//
+                    //  7. Salir.                       //
+                    /////////////////////////////////////
                     """
             );
             opcion = Integer.parseInt(sc.nextLine());
@@ -76,7 +78,7 @@ public class Aplicacion {
                     }
                 case 3:
                     System.out.println("Ingrese código del producto a eliminar:");
-                    String codigoDel= sc.nextLine();
+                    String codigoDel = sc.nextLine();
                     tienda.eliminarProducto(codigoDel);
                     break;
                 case 4:
@@ -91,6 +93,7 @@ public class Aplicacion {
                 case 6:
                     System.out.println("Mostrar historial de compras:");
                     break;
+
             }
         }
         System.out.println("Gracias por usar mi intento de Aplicacion xd");

@@ -75,7 +75,7 @@ public class RopaDeportiva extends ProductoBase{
 
 
     public String getInfo(){
-        return "Talla: " + talla + ", Material: " + material + ", Precio: " + getPrecio() + ", Stock: " + getStock();
+        return "Codigo: "+ getCodigo() + ", Nombre: "+ getNombre() + ", Talla: " + talla + ", Material: " + material + ", Precio: " + getPrecio() + ", Stock: " + getStock();
     }
     @Override
     public void setPrecio(double precio) {

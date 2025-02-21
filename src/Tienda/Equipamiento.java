@@ -16,15 +16,7 @@ public class Equipamiento extends ProductoBase {
 
     @Override
     public String getInfo() {
-        final StringBuilder sb = new StringBuilder("Equipamiento{");
-        sb.append("codigo='").append(getCodigo()).append('\'');
-        sb.append(", nombre='").append(getNombre()).append('\'');
-        sb.append(", precio=").append(getPrecio());
-        sb.append(", stock=").append(getStock());
-        sb.append(", marca='").append(marca).append('\'');
-        sb.append(", deporte='").append(deporte).append('\'');
-        sb.append('}');
-        return sb.toString();
+        return "Codigo: "+ getCodigo() + ", Nombre: "+ getNombre() + ", Marca: " + marca + ", Deporte: " + deporte + ", Precio: " + getPrecio() + ", Stock: " + getStock();
 
     }
 
