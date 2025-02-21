@@ -19,12 +19,15 @@ public class Tienda {
     //• void eliminarProducto(String codigo)
     public void eliminarProducto(String codigo) {
         Producto pro = null;
-        for(Producto producto : this.inventario) {
+        for(Producto producto : inventario) {
+            boolean resultado;
             if (producto.getCodigo().equals(codigo)) {
                 pro = producto;
             }
         }
-        this.inventario.remove(pro);
+        if (inventario.remove(pro)){
+            System.out.println("Producto eliminado con éxito.");
+        } else System.out.println("Producto no encontrado");
     }
     public void actualizarProducto(String codigo, double nuevoPrecio, int nuevoStock) {
         for(Producto producto : this.inventario) {
