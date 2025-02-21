@@ -37,63 +37,73 @@ public class Aplicacion {
                     /////////////////////////////////////
                     """
             );
-            opcion = Integer.parseInt(sc.nextLine());
 
-            switch (opcion) {
-                case 1:
-                    System.out.println("Inventario:");
-                    Tienda.mostrarInventario();
-                    break;
-                case 2:
-                    System.out.println("Ingrese código del producto:");
-                    String codigo = sc.nextLine();
-                    System.out.println("Ingrese nombre del producto:");
-                    String nombre = sc.nextLine();
-                    System.out.println("Ingrese precio del producto:");
-                    double precio = Double.parseDouble(sc.nextLine());
-                    System.out.println("Ingrese stock del producto:");
-                    int stock = Integer.parseInt(sc.nextLine());
-                    System.out.println("1. Ropa Deportiva" + "2. Equipación");
-                    int tipoProducto = Integer.parseInt(sc.nextLine());
-                    switch (tipoProducto) {
-                        case 1:
-                            System.out.println("Ingrese talla:");
-                            String talla = sc.nextLine();
-                            System.out.println("Ingrese material:");
-                            String material = sc.nextLine();
-                            RopaDeportiva nuevaRopa = new RopaDeportiva(codigo, nombre, precio, stock, talla, material);
-                            tienda.addProducto(nuevaRopa);
-                            break;
-                        case 2:
-                            System.out.println("Ingrese marca del equipamiento:");
-                            String marca = sc.nextLine();
-                            System.out.println("Ingrese el deporte del equipamiento:");
-                            String deporte = sc.nextLine();
-                            Equipamiento nuevoEquipo = new Equipamiento(codigo, nombre, precio, stock, marca, deporte);
-                            tienda.addProducto(nuevoEquipo);
-                            break;
-                        default:
-                            System.out.println("Opción inválida.");
-                            break;
-                    }
-                case 3:
-                    System.out.println("Ingrese código del producto a eliminar:");
-                    String codigoDel = sc.nextLine();
-                    tienda.eliminarProducto(codigoDel);
-                    break;
-                case 4:
-                    System.out.println("Actualizar producto");
-                    System.out.println("Codigo del producto a modificar");
-                    String codigoAModificar = sc.nextLine();
+            try {
+                opcion = Integer.parseInt(sc.nextLine());
+                switch (opcion) {
+                    case 1:
+                        System.out.println("Inventario:");
+                        Tienda.mostrarInventario();
+                        break;
+                    case 2:
+                        System.out.println("Ingrese código del producto:");
+                        String codigo = sc.nextLine();
+                        System.out.println("Ingrese nombre del producto:");
+                        String nombre = sc.nextLine();
+                        System.out.println("Ingrese precio del producto:");
+                        double precio = Double.parseDouble(sc.nextLine());
+                        System.out.println("Ingrese stock del producto:");
+                        int stock = Integer.parseInt(sc.nextLine());
+                        System.out.println("1. Ropa Deportiva" + "2. Equipación");
+                        int tipoProducto = Integer.parseInt(sc.nextLine());
+                        switch (tipoProducto) {
+                            case 1:
+                                System.out.println("Ingrese talla:");
+                                String talla = sc.nextLine();
+                                System.out.println("Ingrese material:");
+                                String material = sc.nextLine();
+                                RopaDeportiva nuevaRopa = new RopaDeportiva(codigo, nombre, precio, stock, talla, material);
+                                tienda.addProducto(nuevaRopa);
+                                break;
+                            case 2:
+                                System.out.println("Ingrese marca del equipamiento:");
+                                String marca = sc.nextLine();
+                                System.out.println("Ingrese el deporte del equipamiento:");
+                                String deporte = sc.nextLine();
+                                Equipamiento nuevoEquipo = new Equipamiento(codigo, nombre, precio, stock, marca, deporte);
+                                tienda.addProducto(nuevoEquipo);
+                                break;
+                            default:
+                                System.out.println("Opción inválida.");
+                                break;
+                        }
+                    case 3:
+                        System.out.println("Ingrese código del producto a eliminar:");
+                        String codigoDel = sc.nextLine();
+                        tienda.eliminarProducto(codigoDel);
+                        break;
+                    case 4:
+                        System.out.println("Actualizar producto");
+                        System.out.println("Codigo del producto a modificar");
+                        String codigoAModificar = sc.nextLine();
 
-                    break;
-                case 5:
-                    System.out.println("Realizar compra:");
-                    break;
-                case 6:
-                    System.out.println("Mostrar historial de compras:");
-                    break;
+                        break;
+                    case 5:
+                        System.out.println("Realizar compra:");
+                        break;
+                    case 6:
+                        System.out.println("Mostrar historial de compras:");
+                        break;
+                    case 7:
+                        System.out.println("Saliendo...");
+                        break;
+                    default:
+                        System.out.println("Opción incorrecta, prueba de nuevo");
+                        break;
 
+                }
+            } catch (NumberFormatException e) {
+                System.out.println("Has introducido un valor incorrecto, prueba de nuevo, solo números!");
             }
         }
         System.out.println("Gracias por usar mi intento de Aplicacion xd");
