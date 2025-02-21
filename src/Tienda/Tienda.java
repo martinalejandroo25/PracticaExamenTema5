@@ -1,15 +1,16 @@
 package Tienda;
 
 import java.time.LocalDate;
+import java.util.ArrayList;
 import java.util.List;
 
 public class Tienda {
     //Clase Tienda:
     //• Atributos:
     //• List<Producto> inventario
-    List<Producto> inventario;
+    List<Producto> inventario = new ArrayList<Producto>();
     //• List<Compra> historialCompras
-    List<Compra> historialCompras;
+    List<Compra> historialCompras = new ArrayList<Compra>();
     //• Métodos principales:
     //• void añadirProducto(Producto p)
     public void addProducto(Producto p) {

@@ -34,7 +34,7 @@ public class Aplicacion {
                 """
         );
         int opcion = Integer.parseInt(sc.nextLine());
-        while (opcion!= 0) {
+        while (opcion!= 7) {
             switch (opcion) {
                 case 1:
                     System.out.println("Inventario:");
@@ -86,10 +86,9 @@ public class Aplicacion {
                 case 6:
                     System.out.println("Mostrar historial de compras:");
                     break;
-                case 0:
-                    System.out.println("Gracias por usar mi intento de Aplicacion xd");
-                    break;
             }
         }
+        System.out.println("Gracias por usar mi intento de Aplicacion xd");
+
     }
 }
